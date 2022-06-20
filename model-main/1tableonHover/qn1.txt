@@ -1,0 +1,11 @@
+1. 
+a) Design a webpage in HTML. It should contain a table with headings as Country and Capital. The Title should be of different colour. Everytime you hover cursor above a row it should be displayed in different colour. Webpage should also contain a header and footer.
+
+(table.html)
+
+b) Using AJAX create a single page application such that if you select a capital from the table it should display some information about that city along with image.
+
+(ajax.html)
+
+c) Design Q1 using ReactJS
+

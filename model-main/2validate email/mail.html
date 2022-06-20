@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta title="Mail">
+        <link href="mail.css" rel="stylesheet">
+        <script>
+            function validate() {
+                var s = document.getElementById("email").value;
+                var pattern = /[A-Z0-9a-z]+@[A-Z0-9a-z]*\.[A-Z0-9a-z]+/;
+                if(pattern.test(s)) {
+                    document.getElementById("validate").innerHTML = "Valid Email";
+                }
+                else {
+                    document.getElementById("validate").innerHTML = "Invalid Email";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header class="heading">MAIL</header><br><br><br>
+        <form action="http://localhost:8080/qn2/SendMail">
+            Name: <input type="text" name="name"><br><br>
+            To: <input type="email" name="email" id="email"><br><br>
+            <p id="validate"></p><br>
+            Message: <input type="textarea" name="msg"><br><br>
+            <input type="submit" value="Submit" onclick="validate()">
+        </form>
+    </body>
+</html>

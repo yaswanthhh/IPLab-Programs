@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta title="Ajax Question">
+        <link rel="stylesheet" href="style.css" type="text/html">
+
+    </head>
+    
+    <body>
+        <header class="header">COUNTRIES AND CAPITALS</header>
+        <div class="spacer"></div>
+        <div>
+            <p id="capital"></p>
+            <img id="image">
+            <p id="description"></p>
+        </div>
+        <table id="table-content"></table>
+        <footer>Copyright @ 2022</footer>
+        <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "country.xml", false);
+            xhttp.send();
+        
+                    // store the response values
+                    var xdoc = xhttp.responseXML;
+                    // find the enclosing tag
+                    var x = xdoc.getElementsByTagName("countries");
+                    var table = "<thead><tr><td>Countries</td><td>Capitals</td></tr></thead><tbody>";
+                    for(var i=0; i<x.length; i++) {
+                        // iterate as x[i].getelements....
+                        table += "<tr onclick='display("+i+")'><td>"+x[i].getElementsByTagName("country")[0].childNodes[0].nodeValue+"</td><td>"+x[i].getElementsByTagName("capital")[0].childNodes[0].nodeValue+"</td></tr>";
+                    }
+                    table += "</tbody>";
+                    document.getElementById("table-content").innerHTML = table;
+            
+    
+            function display(i) {
+                document.getElementById("capital").innerHTML = x[i].getElementsByTagName("capital")[0].childNodes[0].nodeValue;
+                document.getElementById("description").innerHTML = x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                document.getElementById("image").setAttribute("src",x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue);
+            }
+        </script>
+    </body>
+</html>

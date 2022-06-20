@@ -1,0 +1,6 @@
+2. a) Create a form with Name, Email(To send to) and Message fields, validate the email and add Css styling to the form. 
+
+b) The information in the form is sent to database (servlets) 
+Display all the records from the forms filled
+
+c) Display all messages sent to a particular email ID

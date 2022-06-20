@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta title="Car Navigation">
+        <script>
+            var i=0;
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "cars.xml", false);
+                xhttp.send();
+                var x = xhttp.responseXML.getElementsByTagName("car");
+                console.log(x);
+            function display(i) {
+                var text = "<p style='color:"+document.getElementById("color").value+"'>"+x[i].getElementsByTagName("type")[0].childNodes[0].nodeValue+"<br>"+x[i].getElementsByTagName("regno")[0].childNodes[0].nodeValue+"<br>";
+                    var value = document.getElementById("color").value;
+                    document.getElementById("content").innerHTML = text;
+                document.getElementById("content").setAttribute("style","color:"+value);
+            }
+            function previous() {
+                if(i>0) {
+                    i--;
+                }
+                display(i);
+            }
+            function next() {
+                if(i<=x.length) {
+                    i++;
+                }
+                display(i);
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <form>
+                <input type="button" value="Next" onclick = "next()">
+                <input type="button" value="Previous" onclick="previous()">
+                <input type="text" name="color" id="color">
+            </form>
+            
+            <div id="content"></div>
+        </form>
+    </body>
+</html>

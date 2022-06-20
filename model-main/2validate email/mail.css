@@ -1,0 +1,22 @@
+body {
+    text-align:center;
+}
+
+.heading {
+    height: 50px;
+    color: white;
+    background: black;
+    font-size:20px;
+}
+
+input[type=text] {
+    width: 60%;
+    margin:auto;
+}
+
+input[type=email] {
+    width: 60%;
+    margin:auto;
+}
+
+

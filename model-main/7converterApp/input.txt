@@ -1,0 +1,1 @@
+[{"_id":"62af618b82d0e0a7962cfcfe","name":"Shreya","dept":"cse","allowance":20000},{"_id":"62af618b82d0e0a7962cfcff","name":"Sriram","dept":"ece","allowance":30000},{"_id":"62af618b82d0e0a7962cfd00","name":"Gayathri","dept":"eee","allowance":5000}]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta title="Registration">
+    <script>
+        setInterval(showTime, 1000);
+        function showTime() {
+            let time = new Date();
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+            var cur_time = hours+":"+minutes+":"+seconds;
+        
+            document.getElementById("clock").innerHTML = cur_time;
+        }
+        showTime();
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "password.txt",true);
+        xhttp.send();
+        function validate(this) {
+            var value = document.getElementById("pass").value;
+            var f1 = 0;
+            var f2 = 0;
+            var f3 = 0;
+            var f4 = 0;
+            for(var i=0;i<value.length;i++) {
+                if(value[i]>='a' && value[i]<='z') {
+                    f1 = 1;
+                }
+                if(value[i]>='A' && value[i]<='Z') {
+                    f2 = 1;
+                }
+                if(value[i]>=0 && value[i]<=9) {
+                    f3 = 1;
+                }
+                if(value.length>=8) {
+                    f4 = 1;
+                }
+            }
+            
+            if(f1&&f2&&f3&&f4) {
+                document.getElementById("valid").innerHTML = xhttp.responseText;
+            }
+            else {
+                document.getElementById("valid").innerHTML = "Invalid!";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <p id="clock">3:00</p>
+    <form>
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        Telephone: <input type="tel" name="tel"><br><br>
+        Password: <input type="password" name="password" onkeypress="validate()" id="pass"><br><br>
+        <p id="valid"></p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

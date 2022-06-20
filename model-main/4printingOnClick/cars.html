@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta title="Cars">
+        <script>
+            function send() {
+                var xhttp = new XMLHttpRequest();
+                var value = document.getElementById("color").value;
+                xhttp.open("GET", "cars.xml", false);
+                xhttp.send();
+                var x = xhttp.responseXML.getElementsByTagName("car");
+                console.log(x);
+                var table = "<table><tr><td>Type</td><td>RegNo</td><tr>";
+                for(var i=0; i<x.length; i++) {
+                    table += "<tr><td>"+x[i].getElementsByTagName("type")[0].childNodes[0].nodeValue+"</td><td>"+x[i].getElementsByTagName("regno")[0].childNodes[0].nodeValue+"</td></tr>";
+                }
+                table += "</table>";
+                document.getElementById("content").setAttribute("style","color:"+value);
+                document.getElementById("content").innerHTML = table;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Color: <input type="text" name="color" id="color">
+            <input type="button" value="Submit" onclick="send()">
+            <div id="content"></div>
+        </form>
+    </body>
+</html>
