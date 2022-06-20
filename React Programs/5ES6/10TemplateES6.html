@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template Strings</title>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<h1>Template Strings</h1>
+<p>Open the console</p>
+<script type="text/babel">
+
+    var lastName = "John"
+    var firstName = "Allen"
+
+    var publisher = "O’Reilly Media, Inc."
+    var book = "Learning React"
+    var qty = 12
+    var price = 950
+
+    // ES6 template strings do not ignore whitespace
+
+    console.log(`
+    Hello ${firstName},
+    Thanks for ordering ${qty} ${book} books.
+    Order Details
+     ${firstName} ${lastName}
+     ${qty} x Rs.${price} = Rs.${qty*price} towards ${book}
+    The books are sent to the address mentioned. 
+    Thanks,
+    ${publisher}
+    `)
+
+</script>
+</body>
+</html>

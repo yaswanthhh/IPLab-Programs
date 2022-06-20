@@ -1,0 +1,30 @@
+body {
+  background-color:rgba(26, 174, 48, 0.484);
+}
+
+h1:hover{background-color: #4Ca4fA;}
+
+h1 {
+  color: purple;
+  font-family:sans-serif;
+  text-align: center;
+}
+
+p{
+	background-color:lightblue;
+}
+
+.tab{
+background-color:white;
+color:black;
+border:2px solid #aabbdd;
+padding:10px 20px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+}
+
+.tab:hover, .tab:active{
+background-color:#aabbdd;
+color:white;
+}
