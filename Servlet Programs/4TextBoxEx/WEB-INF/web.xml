@@ -1,0 +1,10 @@
+<web-app>
+<servlet>
+   <servlet-name>Text</servlet-name>
+   <servlet-class>TextBox</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>Text</servlet-name>
+   <url-pattern>/Text</url-pattern>
+</servlet-mapping>
+</web-app>

@@ -1,0 +1,10 @@
+<web-app>
+<servlet>
+   <servlet-name>PostMtd</servlet-name>
+   <servlet-class>PostServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>PostMtd</servlet-name>
+   <url-pattern>/PostMtd</url-pattern>
+</servlet-mapping>
+</web-app>

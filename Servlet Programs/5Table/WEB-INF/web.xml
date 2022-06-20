@@ -1,0 +1,10 @@
+<web-app>
+<servlet>
+   <servlet-name>Fo</servlet-name>
+   <servlet-class>TableForm</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>Fo</servlet-name>
+   <url-pattern>/Fo</url-pattern>
+</servlet-mapping>
+</web-app>

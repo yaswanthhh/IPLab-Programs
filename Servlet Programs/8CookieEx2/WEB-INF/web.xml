@@ -1,0 +1,29 @@
+<web-app>
+<servlet>
+   <servlet-name>HF</servlet-name>
+   <servlet-class>HelloForm</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>HF</servlet-name>
+   <url-pattern>/HF</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>RC</servlet-name>
+   <servlet-class>ReadCookies</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>RC</servlet-name>
+   <url-pattern>/RC</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>DC</servlet-name>
+   <servlet-class>DeleteCookies</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>DC</servlet-name>
+   <url-pattern>/DC</url-pattern>
+</servlet-mapping>
+
+</web-app>
