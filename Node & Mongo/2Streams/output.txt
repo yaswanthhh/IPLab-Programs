@@ -1,0 +1,3 @@
+Streams are objects that let you 
+read data from a source or write data to a destination 
+in continuous fashion.
